@@ -1,0 +1,10 @@
+<h1>List of flats</h1>
+
+<p>
+  <% @flats.each do |flat| %>
+    <%= flat.description %>
+    <%= flat.address %>
+    <%= flat.price %>
+  <% end %>
+</p>
+

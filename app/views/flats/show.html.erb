@@ -1,0 +1,9 @@
+<% @flats.each do |flat| %>
+<p><%= flat.description %>
+  <%= flat.address %>
+  <%= flat.price %>
+  <%= link_to "Profile", users_path(@user_id) %>
+  <% end %>
+</p>
+
+<!-- this one needs to be changes because it can only show one flat (MASHA) -->
