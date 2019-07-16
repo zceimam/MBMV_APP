@@ -1,9 +1,12 @@
-<h1>List of flats</h1>
+<h1>List of all flats</h1>
 
-<p>
-<% @flats.each do |flat| %>
-<p><%= link_to flat.description, flat_path(flat) %></p>
-<p><%= flat.price %>"$"</p>
-<% end %>
-</p>
+<div class="card">
+  <% @flats.each do |flat| %>
+    <div class="card-trip">
+      <p></p>
+      <p><%= link_to flat.description, flat_path(flat) %></p>
+      <p><%= flat.price %>"$"</p>
+    </div>
+  <% end %>
+</div>
 
