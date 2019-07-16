@@ -1,5 +1,10 @@
-<%= @user.email %>
-<%= @user.owner %>
-<%= @user.bookings.flat %>
-<%= @user.description %>
-<%= @user.name %>
+<div class="container">
+  <div class="user-info">
+    <%= @user.email %>
+  </div>
+
+  <div class='btn-flat btn-size'>
+    <%= link_to 'Rent your space flat', new_flat_path %>
+  </div>
+</div>
+
