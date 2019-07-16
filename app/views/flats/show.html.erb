@@ -1,7 +1,9 @@
 
 <h2><%= @flat.description %></h2>
 <p><%= @flat.address %></p>
-<p><%= @flat.price %>"$"</p>
+<p><%= @flat.price %>$</p>
+<%= cl_image_tag @flat.photo %>
+
 <%= link_to "Delete", flat_path(@flat),
   method: :delete,
   data: { confirm: "Are you sure?"} %>
