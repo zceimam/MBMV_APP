@@ -1,9 +1,13 @@
 class FlatsController < ApplicationController
   before_action :set_user_id, only: [:show_owned_flats, :show_booked_flats]
-  skip_before_action :authenticate_user!
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @flats = Flat.all
+  end
+
+  def show
+    @flat = Flat.find(params[:id])
   end
 
   def show_owned_flats
@@ -20,11 +24,18 @@ class FlatsController < ApplicationController
 
   def create
     @flat = Flat.new(flat_params)
+    @flat.user = current_user
     if @flat.save
       redirect_to flats_path
     else
       render :new
     end
+  end
+
+  def destroy
+    @flat = Flat.find(params[:id])
+    @flat.destroy
+    redirect_to flats_path
   end
 
   private

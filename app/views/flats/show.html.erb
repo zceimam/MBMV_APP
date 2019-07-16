@@ -1,9 +1,9 @@
-<% @flats.each do |flat| %>
-<p><%= flat.description %>
-  <%= flat.address %>
-  <%= flat.price %>
-  <%= link_to "Profile", users_path(@user_id) %>
-  <% end %>
-</p>
 
+<h2><%= @flat.description %></h2>
+<p><%= @flat.address %></p>
+<p><%= @flat.price %></p>
+<%= link_to "Delete", flat_path(@flat),
+  method: :delete,
+  data: { confirm: "Are you sure?"} %>
+<p><%= link_to "Back to list", flats_path %></p>
 <!-- this one needs to be changes because it can only show one flat (MASHA) -->
