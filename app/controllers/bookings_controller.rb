@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
   def create
+    raise
     @booking = Booking.new(book_para)
     @booking.user = current_user
     @booking.flat = flat_finder
