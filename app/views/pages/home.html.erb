@@ -1,8 +1,35 @@
-
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( <%= image_path 'bannerimage.jpg' %> )">
   <div class="container">
     <h1>Welcome to MBMV, book your room in<strong> outer space</strong>!</h1>
     <p>Spend a night at the ISS</p>
 
   </div>
+</div>
+
+<div>
+  <h1>Welcome to MBMV</h1>
+</div>
+
+
+<div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+  <div class="card-trip-infos">
+    <%= @flats.each do |flat| %>
+    <div>
+      <h2><%= link_to flat.description, flat_path(flat) %></h2>
+    </div>
+    <h2 class="card-trip-pricing"><%= flat.price %>"$"</h2>
+    <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+    <% end %>
+  </div>
+</div>
+
+
+
+<div>
+  <%= link_to "Create Flat", new_flat_path %>
+</div>
+
+<div>
+  <%= link_to "Book Flat", new_flat_booking_path(:flat_id) %>
 </div>
