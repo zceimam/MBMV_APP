@@ -10,6 +10,7 @@ class PagesController < ApplicationController
   end
 
   def bookings
+    raise
     @bookings = current_user.bookings
   end
 end
