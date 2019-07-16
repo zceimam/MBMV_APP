@@ -3,6 +3,7 @@
 <p>
 <% @flats.each do |flat| %>
 <p><%= link_to flat.description, flat_path(flat) %></p>
+<p><%= flat.price %>"$"</p>
 <% end %>
 </p>
 

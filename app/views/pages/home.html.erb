@@ -1,1 +1,27 @@
-<h1>Home page</h1>
+<div>
+  <h1>Welcome to MBMV</h1>
+</div>
+
+
+  <p>
+    <% @flats.each do |flat| %>
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+      <h2><%= link_to flat.description, flat_path(flat) %></h2>
+      <p>Price:<P%= flat.price %>"$"</p>
+    </div>
+
+    <% end %>
+  </p>
+
+
+
+<div>
+  <%= link_to "Create Flat", new_flat_path %>
+</div>
+
+<div>
+  <%= link_to "Book Flat", new_flat_booking_path(:flat_id) %>
+</div>
+
+
