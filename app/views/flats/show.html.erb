@@ -1,34 +1,54 @@
-<div class="show-container">
+  <div class="flat-page">
 
-<!--   <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
-    <div class="card-product-infos">
-      <h2>Product name</h2>
-      <p>Product description with <strong>relevant info</strong> only.</p>
+    <div class="left-side">
+      <div class="card-trip">
+        <%= cl_image_tag(@flat.photo) %>
+        <!-- , :type => :upload, :width => 400, :height => 500, :crop => :fill -->
+        <div class="card-trip-infos">
+          <div>
+            <p>Address : <%= @flat.address %></p>
+          </div>
+          <h2 class="card-trip-pricing"><%= @flat.price %> euros</h2>
+          <%# if @flat.user.avatar.present? %>
+          <%#= cl_image_tag @flat.user.avatar %>
+          <%# else %>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+          <%# end %>
+        </div>
+
+      </div>
+
+      <div class="information">
+        <p>About your flat : <%= @flat.description %></p>
+      </div>
     </div>
-  </div> -->
 
-  <div class="card-product">
-    <%= cl_image_tag @flat.photo %>
+
+    <div class="right-side">
+      <div class="booking">
+        <h1>My booking :</h1>
+          <%= simple_form_for [@flat, @booking] do |f| %>
+            <%= f.input :number,
+                        as: :integer,
+                        input_html: {value: nil },
+                        label: "Number of people:" %>
+            <%= f.input :start_date %>
+            <%= f.input :end_date %>
+            <%= f.input :message,
+                        as: :text,
+                        input_html: { value: nil },
+                        label: "Your message :" %>
+            <%= f.submit class: "btn-flat" %>
+          <% end %>
+      </div>
+    </div>
+    <%= link_to "Delete", flat_path(@flat),
+    method: :delete,
+    data: { confirm: "Are you sure?"} %>
+    <p><%= link_to "Back to list", flats_path %></p>
   </div>
 
-  <div class="information-container">
-    <h1>Your information :</h1>
-    <p>Address : <%= @flat.address %></p>
-    <p>Price : <%= @flat.price %> euros</p>
-  </div>
-
-  <div class="booking-container">
-    <h1>Booking form</h1>
-  </div>
-</div>
 
 
 
 
-
-<%= link_to "Delete", flat_path(@flat),
-method: :delete,
-data: { confirm: "Are you sure?"} %>
-<p><%= link_to "Back to list", flats_path %></p>
-<!-- this one needs to be changes because it can only show one flat (MASHA) -->
