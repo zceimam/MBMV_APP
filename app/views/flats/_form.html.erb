@@ -1,13 +1,13 @@
 <%= simple_form_for(@flat) do |f| %>
-
-  <%= f.input :description %>
-  <%= f.input :address %>
-  <%= f.input :price %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-
-  <%= f.submit %>
-<% end %>
+<div class="create_form">
+    <%= f.input :description %>
+    <%= f.input :address %>
+    <%= f.input :price %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.submit %>
+  <% end %>
+</div>
 
 <%= simple_form_for(@flat) do |f| %>
   <% if @flat.errors.any? %>
