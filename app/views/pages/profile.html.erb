@@ -1,10 +1,25 @@
-<div class="container">
-  <div class="user-info">
-    <%= @user.email %>
+<div class="profile-container profile-wrapper">
+  <div>
+    <div id="profile-name">
+      <h1> <%= @user.name %> </h1>
+    </div>
+
+    <div class="user-info">
+      <p>Email: <%= @user.email %> </p>
+      <p>Phone number: <%= @user.phonenumber %> </p>
+    </div>
+
+    <div class='btn-flat btn-size btn-position'>
+      <%= link_to 'Rent your space flat', new_flat_path %>
+    </div>
+
   </div>
 
-  <div class='btn-flat btn-size'>
-    <%= link_to 'Rent your space flat', new_flat_path %>
+  <div class="profile-description">
+    <p> <%= @user.description %> </p>
   </div>
+
+  <%= cl_image_tag @user.avatar, :class => "avatar-square profile-avatar" %>
+
 </div>
 
