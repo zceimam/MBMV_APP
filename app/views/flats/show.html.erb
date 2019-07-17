@@ -1,13 +1,40 @@
+<div class="show-container">
 
-<h2><%= @flat.description %></h2>
-<p><%= @flat.address %></p>
-<p><%= @flat.price %>$</p>
-<%= cl_image_tag @flat.photo %>
+<!--   <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+    <div class="card-product-infos">
+      <h2>Product name</h2>
+      <p>Product description with <strong>relevant info</strong> only.</p>
+    </div>
+  </div> -->
+
+  <div class="card-product">
+     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" class="flat-image-show">
+  </div>
+
+  <div class="information-container">
+    <h1>Your information :</h1>
+    <p>Address : <%= @flat.address %></p>
+    <p>Price : <%= @flat.price %> euros</p>
+  </div>
+
+  <div class="booking-container">
+    <h1>Booking form</h1>
+  </div>
+</div>
+
+
+
+
+
+<!-- <h2><%= @flat.description %></h2>
+
+<%= cl_image_tag @flat.photo %> -->
 
 
 
 <%= link_to "Delete", flat_path(@flat),
-  method: :delete,
-  data: { confirm: "Are you sure?"} %>
+method: :delete,
+data: { confirm: "Are you sure?"} %>
 <p><%= link_to "Back to list", flats_path %></p>
 <!-- this one needs to be changes because it can only show one flat (MASHA) -->

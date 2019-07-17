@@ -6,31 +6,24 @@
 </div>
 
   <div class="cards">
-  <% @flats.each do |flat| %>
-    <div class="card-trip">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
-      <div class="card-trip-infos">
-        <div>
-          <h2><%= link_to flat.description, flat_path(flat) %></h2>
-          <p>Short description here!</p>
+    <div class="container">
+      <div class="row">
+        <% @flats.each do |flat| %>
+        <div class="col-12 col-lg-6">
+          <div class="card-trip mx-auto">
+            <%= image_tag("land-views.png") %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= link_to flat.description, flat_path(flat) %></h2>
+                <p>Short description here!</p>
+              </div>
+              <h2 class="card-trip-pricing"><%= flat.price %> $</h2>
+              <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+            </div>
+          </div>
         </div>
-        <h2 class="card-trip-pricing"><%= flat.price %> $</h2>
-        <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+        <% end %>
       </div>
     </div>
-   <% end %>
    </div>
 
-
-
-
-
-
-
-<div>
-  <%= link_to "Create Flat", new_flat_path %>
-</div>
-
-<div>
-  <%= link_to "Book Flat", new_flat_booking_path(:flat_id) %>
-</div>

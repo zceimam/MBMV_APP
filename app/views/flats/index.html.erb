@@ -1,9 +1,27 @@
-<h1>List of flats</h1>
 
-<p>
-<% @flats.each do |flat| %>
-<p><%= link_to flat.description, flat_path(flat) %></p>
-<p><%= flat.price %>"$"</p>
-<% end %>
-</p>
+  <div class="title">
+    <h2 class="text-center">Places to stay around the world</h2>
+  </div>
+<div class="cards">
+    <div class="container">
+      <div class="row">
+        <% @flats.each do |flat| %>
+        <div class="col-12 col-lg-6">
+          <div class="card-trip mx-auto">
+            <%= image_tag("land-views.png") %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= link_to flat.description, flat_path(flat) %></h2>
+                <p>Short description here!</p>
+              </div>
+              <h2 class="card-trip-pricing"><%= flat.price %> $</h2>
+              <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
 
