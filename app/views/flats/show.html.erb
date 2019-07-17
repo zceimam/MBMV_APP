@@ -23,6 +23,7 @@
       </div>
     </div>
 
+
     <div class="right-side">
       <div class="booking">
         <h1>My booking :</h1>
@@ -39,56 +40,15 @@
                         label: "Your message :" %>
             <%= f.submit class: "btn-flat" %>
           <% end %>
-
-        <!-- <form action="/my-booking-page" method="post">
-          <div class="book-inputs">
-            <label for="name">Number of people :</label><br>
-            <input type="number" id="people" name="user_name" min="1">
-          </div>
-          <div class="book-inputs">
-            <label for="mail">Mail :</label><br>
-            <input type="email" id="mail" name="user_mail">
-          </div>
-          <div class="book-inputs">
-            <label for="start">Start date:</label><br>
-            <input type="date" id="start" name="trip-start"
-            value="2018-07-22"
-            min="1900-01-01" max="2019-07-17">
-          </div>
-          <div class="book-inputs">
-            <label for="start">End date:</label><br>
-            <input type="date" id="start" name="trip-end"
-            value="2018-07-22"
-            min="2019-07-17" max="2119-07-17">
-          </div>
-          <div class="book-inputs">
-            <label for="msg">Your message :</label><br>
-            <textarea id="msg" name="user_message"></textarea>
-          </div>
-            <a class="btn btn-flat" href="#">Book now</a>
-        </form> -->
-
       </div>
     </div>
+    <%= link_to "Delete", flat_path(@flat),
+    method: :delete,
+    data: { confirm: "Are you sure?"} %>
+    <p><%= link_to "Back to list", flats_path %></p>
   </div>
 
-  <%= link_to "Delete", flat_path(@flat),
-  method: :delete,
-  data: { confirm: "Are you sure?"} %>
-  <p><%= link_to "Back to list", flats_path %></p>
-</div>
 
 
 
 
-
-
-
-
-<!-- <h2><%= @flat.description %></h2>
-
-<%= cl_image_tag @flat.photo %>
-
-
-
-<!-- this one needs to be changes because it can only show one flat (MASHA) -->

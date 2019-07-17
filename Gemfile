@@ -18,6 +18,9 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+#gem for a map
+gem 'geocoder'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end

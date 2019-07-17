@@ -12,12 +12,12 @@
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #1EDD88;
-  transition: background 0.3s ease;
+  background-color: $middle-gray;
+  // transition: background 0.3s ease;
 }
 
 .btn-flat:hover {
-  background: #1BCB7F;
+  background: rgba(190, 190, 190, 0.5);
   color: white;
 }
 

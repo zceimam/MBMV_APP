@@ -1,24 +1,26 @@
-<%= simple_form_for(@flat) do |f| %>
+<div class="page" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path 'formbackground.png' %>);">
+  <%= simple_form_for(@flat) do |f| %>
+  <div class="create_form">
+      <%= f.input :description %>
+      <%= f.input :address %>
+      <%= f.input :price %>
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
+      <%= f.submit %>
+    <% end %>
+  </div>
 
-  <%= f.input :description %>
-  <%= f.input :address %>
-  <%= f.input :price %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
+  <%= simple_form_for(@flat) do |f| %>
+    <% if @flat.errors.any? %>
+      <div class="errors-container">
+        <ul>
+          <% @flat.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-  <%= f.submit %>
-<% end %>
-
-<%= simple_form_for(@flat) do |f| %>
-  <% if @flat.errors.any? %>
-    <div class="errors-container">
-      <ul>
-        <% @flat.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
+    <!-- [...] all the fields -->
   <% end %>
-
-  <!-- [...] all the fields -->
-<% end %>
+</div>

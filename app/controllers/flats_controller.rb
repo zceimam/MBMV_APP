@@ -2,6 +2,17 @@ class FlatsController < ApplicationController
   before_action :set_user_id, only: [:show_owned_flats, :show_booked_flats]
   skip_before_action :authenticate_user!, only: [:index, :show]
 
+  def call_map
+   @flats = Flat.where.not(latitude: nil, longitude: nil)
+
+   @markers = @flats.map do |flat|
+    {
+      lat: flat.latitude,
+      lng: flat.longitude
+    }
+  end
+end
+
   def index
     @flats = Flat.all
   end
