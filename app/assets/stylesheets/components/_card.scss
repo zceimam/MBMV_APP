@@ -4,16 +4,18 @@
 // }
 
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-gap: 16px;
+  margin-top: 16px;
+  margin-left: 10px;
+  margin-bottom: 16px;
+  margin-right: 10px;
+
 }
 
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 450px;
 }
 
 .card-trip > img {
