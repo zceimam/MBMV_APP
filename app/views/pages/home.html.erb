@@ -5,25 +5,26 @@
   </div>
 </div>
 
-<div class="cards">
-  <div class="container">
-    <div class="row">
-      <% @flats.each do |flat| %>
-        <div class="col-12 col-lg-6">
-          <div class="card-trip mx-auto mt-3">
-            <%= cl_image_tag(flat.photo) %>
-            <div class="card-trip-infos">
-              <div>
-                <h2><%= link_to flat.description, flat_path(flat) %></h2>
-                <p>Short description here!</p>
-              </div>
-              <h2 class="card-trip-pricing"><%= flat.price %> $</h2>
-              <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+<div class="container">
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <%= link_to flat_path(flat) do %>
+      <div class="col-12 col-lg-6 mt-3">
+        <div class="flat-card-trip mx-auto ">
+          <div class="card_img">
+          <%= cl_image_tag(flat.photo) %>
+          </div>
+          <div class="flat-card-trip-infos">
+            <div>
+              <h2><%= link_to flat.description, flat_path(flat) %></h2>
             </div>
+            <h2 class="flat-card-trip-pricing"><%= flat.price %> $</h2>
+            <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="flat-card-trip-user avatar-bordered"/>
           </div>
         </div>
+      </div>
       <% end %>
-    </div>
+    <% end %>
   </div>
 </div>
 
