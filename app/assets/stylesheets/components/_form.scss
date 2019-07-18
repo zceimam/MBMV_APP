@@ -8,16 +8,7 @@
 .create_form {
   background-size: 50%;
   color: white;
-  padding: 125px;
-  display: inline-block;
-  text-align: left;
-  margin-left: 120px
-
 }
-
-// #new_booking {
-//   background-color: white;
-// }
 
 #bookinputs {
   background-color: white;
@@ -28,3 +19,18 @@
     width: 70%;
 }
 
+.form_group {
+  width: 150%;
+}
+
+textarea.form-control {
+  background-color: #b4b4b4;
+}
+
+.form-control {
+  background-color: #b4b4b4;
+}
+
+a {
+  color: white;
+}

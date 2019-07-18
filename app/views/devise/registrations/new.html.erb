@@ -1,10 +1,11 @@
 <div class="page" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path 'formbackground.png' %>);">
-    <h2 id="signup-header">Sign up</h2>
+
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
 
     <div class="create_form">
+      <h2 id="signup-header">Sign up</h2>
       <%= f.input :email,
                   required: true,
                   autofocus: true,
@@ -28,7 +29,7 @@
       <%= f.input :avatar %>
       <%= f.input :avatar_cache, as: :hidden %>
 
-      <%= f.submit "Sign up", class: "home-btn" %>
+      <%= f.submit "Sign up", class: "submit-btn" %>
     </div>
   <% end %>
 </div>
