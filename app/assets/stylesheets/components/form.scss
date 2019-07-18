@@ -3,8 +3,6 @@
     height: 100%;
     margin-top: -56px;
     text-align: center;
-
-
 }
 
 .create_form {
@@ -15,16 +13,18 @@
   text-align: left;
   margin-left: 120px
 
-
-
 }
 
-textarea.form-control {
-    background-color: rgb(180, 180, 180);
+// #new_booking {
+//   background-color: white;
+// }
+
+#bookinputs {
+  background-color: white;
 }
 
 .form-control {
-    background-color: rgb(180, 180, 180);
+    // background-color: rgb(180, 180, 180);
     width: 70%;
 }
 
