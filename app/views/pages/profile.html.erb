@@ -8,11 +8,14 @@
       <p>Email: <%= @user.email %> </p>
       <p>Phone number: <%= @user.phonenumber %> </p>
     </div>
+  </div>
 
-    <div class='btn-flat btn-size btn-position'>
-      <%= link_to 'Rent your space flat', new_flat_path %>
-    </div>
+  <div class='btn-flat btn-size btn-position'>
+      <%= link_to 'Create your space flat', new_flat_path %>
+  </div>
 
+  <div class='btn-flat btn-size btn-position-edit'>
+      <%= link_to 'Edit profile', edit_user_registration_path %>
   </div>
 
   <div class="profile-description">
