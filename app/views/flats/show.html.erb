@@ -1,5 +1,5 @@
+<div class="container">
   <div class="flat-page-fshow">
-
     <div class="left-side-fshow">
       <div class="card-trip-fshow">
         <%= cl_image_tag(@flat.photo) %>
@@ -12,14 +12,16 @@
           <%# if @flat.user.avatar.present? %>
           <%#= cl_image_tag @flat.user.avatar %>
           <%# else %>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered big-avatar" />
           <%# end %>
         </div>
-
       </div>
 
       <div class="information-fshow">
         <p>About your flat : <%= @flat.description %></p>
+      </div>
+      <div class="buttons-fshow">
+        <p><%= link_to "Back to list", flats_path, class: "btn-flat-retro-blue" %></p>
       </div>
     </div>
 
@@ -42,13 +44,9 @@
         <% end %>
       </div>
     </div>
-    <div class="buttons-fshow">
-      <%= link_to "Delete", flat_path(@flat),
-      method: :delete,
-      data: { confirm: "Are you sure?"} %>
-      <p><%= link_to "Back to list", flats_path %></p>
-    </div>
   </div>
+</div>
+
 
 
 
