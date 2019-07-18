@@ -14,4 +14,5 @@ Rails.application.routes.draw do
 
   get 'profile', to: 'pages#profile', as: :profile
   get 'bookings', to: 'pages#bookings', as: :bookings
+  get 'my_flats', to: 'pages#my_flats', as: :my_flats
 end

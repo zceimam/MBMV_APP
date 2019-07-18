@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @flats = Flat.all
-    @flats_with_address= Flat.where.not(latitude: nil, longitude: nil)
+    @flats_with_address = Flat.where.not(latitude: nil, longitude: nil)
 
     @markers = @flats_with_address.map do |flat|
       {
@@ -19,5 +19,9 @@ class PagesController < ApplicationController
 
   def bookings
     @bookings = current_user.bookings
+  end
+
+  def my_flats
+    @flats = current_user.owned_flats
   end
 end
