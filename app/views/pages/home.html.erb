@@ -11,7 +11,7 @@
       <% @flats.each do |flat| %>
         <div class="col-12 col-lg-6">
           <div class="card-trip mx-auto mt-3">
-            <%= image_tag("land-views.png") %>
+            <%= cl_image_tag(flat.photo) %>
             <div class="card-trip-infos">
               <div>
                 <h2><%= link_to flat.description, flat_path(flat) %></h2>
