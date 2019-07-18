@@ -1,5 +1,5 @@
 <div class="profile-container profile-wrapper">
-  <div>
+  <div id="left-profile">
     <div id="profile-name">
       <h1> <%= @user.name %> </h1>
     </div>
@@ -10,19 +10,20 @@
     </div>
   </div>
 
-  <div class='btn-flat btn-size btn-position'>
-      <%= link_to 'Create your space flat', new_flat_path %>
-  </div>
-
-  <div class='btn-flat btn-size btn-position-edit'>
-      <%= link_to 'Edit profile', edit_user_registration_path %>
-  </div>
-
   <div class="profile-description">
     <p> <%= @user.description %> </p>
   </div>
 
-  <%= cl_image_tag @user.avatar, :class => "avatar-square profile-avatar" %>
+  <div id="right-profile">
+    <%= cl_image_tag @user.avatar, :class => "avatar-square profile-avatar" %>
 
+    <div class='btn-flat btn-size' id="btn-create-profile-page">
+      <%= link_to 'Create your space flat', new_flat_path %>
+    </div>
+
+    <div class='btn-flat btn-size' id="btn-update-profile-page">
+      <%= link_to 'Edit profile', edit_user_registration_path %>
+    </div>
+  </div>
 </div>
 
