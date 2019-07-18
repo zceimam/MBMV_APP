@@ -29,8 +29,12 @@
         <% end %>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <%= link_to "profile", profile_path, :class => "ele-dropdown" %>
+          <% if current_user != nil %>
+            <% if current_user.owner %>
+              <%= link_to "my flats", my_flats_path, :class => "ele-dropdown" %>
+            <% end %>
+          <% end %>
           <%= link_to "my bookings", bookings_path, :class => "ele-dropdown" %>
-          <%= link_to "my flats", my_flats_path, :class => "ele-dropdown" %>
         </div>
       </li>
     </ul>
