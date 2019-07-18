@@ -6,7 +6,7 @@ class CreateFlats < ActiveRecord::Migration[5.2]
       t.integer :price
       t.references :user, foreign_key:true
 
-      t.timestamps
+      t.futuramatimestamps
     end
   end
 end
