@@ -5,13 +5,13 @@ class FlatsController < ApplicationController
   def call_map
    @flats = Flat.where.not(latitude: nil, longitude: nil)
 
-   @markers = @flats.map do |flat|
-    {
-      lat: flat.latitude,
-      lng: flat.longitude
-    }
+     @markers = @flats.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
-end
 
   def index
     @flats = Flat.all
