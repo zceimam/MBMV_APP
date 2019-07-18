@@ -8,7 +8,7 @@
       <%= f.input :photo_cache, as: :hidden %>
       <%= f.submit %>
     <% end %>
-  </div>
+
 
   <%= simple_form_for(@flat) do |f| %>
     <% if @flat.errors.any? %>
@@ -23,4 +23,5 @@
 
     <!-- [...] all the fields -->
   <% end %>
+   </div>
 </div>
