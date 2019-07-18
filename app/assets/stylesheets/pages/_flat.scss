@@ -1,44 +1,50 @@
 html, body { background: white; }
 
-.flat-page {
+.flat-page-fshow {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  position: relative;
 }
 
-.left-side{
-  max-width: 710px;
+.left-side-fshow{
+  width: 54%;
+}
+.right-side-fshow {
+  width: 38%;
 }
 
+.big-avatar {
+  position: relative;
+  top: -35px;
+  width: 80px;
+}
 
-.card-trip {
+.card-trip-fshow {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 100%;
   width: 100%;
-  margin-top: 20px;
 }
 
-.card-trip > img {
-  height: 512px;
-  // width: 100%;
+.card-trip-fshow > img {
+  width: 100%;
   // object-fit: cover;
 }
 
-.card-trip h2 {
+.card-trip-fshow h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-trip p {
+.card-trip-fshow p {
   font-size: 12px;
   opacity: .7;
   margin-top: 20px;
 }
 
 
-.card-trip .card-trip-infos {
+.card-trip-fshow .card-trip-infos-fshow {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -47,35 +53,36 @@ html, body { background: white; }
 
 }
 
-.card-trip-infos .card-trip-user {
+.card-trip-infos-fshow .card-trip-user-fshow {
   position: absolute;
   right: 16px;
   top: -20px;
   width: 40px;
 }
 
-.information {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+.information-fshow {
   transition: 0.3s;
-  margin: 30px 0px 10px 0px;
+  margin: 30px 0px;
   padding:10px;
 }
 
 .right-side{
 }
 
-.booking {
+.booking-fshow {
   width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   margin: 10px;
   padding: 10px;
   border: 2px solid red;
   border-radius: 4px;
-  margin: 20px;
+  margin: 0;
   // text-align: justify;
 }
 
-.book-inputs {
+.buttons-fshow {
 
 }
+
+
 

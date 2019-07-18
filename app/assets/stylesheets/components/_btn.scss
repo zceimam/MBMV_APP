@@ -16,6 +16,22 @@
   // transition: background 0.3s ease;
 }
 
+.btn-flat-retro-blue {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background-color: #167FFB;
+  &:hover {
+    background-color: #388ff5a8;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.btn-retro-blue {
+
+}
+
 .btn-flat:hover {
   background: rgba(190, 190, 190, 0.5);
   color: white;
