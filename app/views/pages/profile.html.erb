@@ -8,6 +8,10 @@
       <p>Email: <%= @user.email %> </p>
       <p>Phone number: <%= @user.phonenumber %> </p>
     </div>
+
+    <div class='btn-flat btn-size btn-position'>
+      <%= link_to 'Create a flat', new_flat_path %>
+    </div>
   </div>
 
   <div class="profile-description">

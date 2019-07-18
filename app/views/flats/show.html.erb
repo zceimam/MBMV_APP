@@ -7,12 +7,13 @@
         <div class="card-trip-infos-fshow">
           <div>
             <p>Address : <%= @flat.address %></p>
+            <p class="card-trip-pricing-fshow">Price : <%= @flat.price %> euros</p>
           </div>
-          <h2 class="card-trip-pricing-fshow"><%= @flat.price %> euros</h2>
+
           <%# if @flat.user.avatar.present? %>
           <%#= cl_image_tag @flat.user.avatar %>
           <%# else %>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered big-avatar" />
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="avatar-fshow" />
           <%# end %>
         </div>
       </div>
@@ -32,13 +33,13 @@
         <%= simple_form_for [@flat, @booking] do |f| %>
         <%= f.input :number,
         as: :integer,
-        input_html: {value: nil },
+        input_html: { value: nil, id: "bookinputs" },
         label: "Number of people:" %>
-        <%= f.input :start_date %>
-        <%= f.input :end_date %>
+        <%= f.input :start_date, input_html: { id: "bookinputs" } %>
+        <%= f.input :end_date, input_html: { id: "bookinputs" } %>
         <%= f.input :message,
         as: :text,
-        input_html: { value: nil },
+        input_html: { value: nil, id: "bookinputs" },
         label: "Your message :" %>
         <%= f.submit class: "btn-flat" %>
         <% end %>
