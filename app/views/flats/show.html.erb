@@ -1,14 +1,14 @@
-  <div class="flat-page">
+  <div class="flat-page-fshow">
 
-    <div class="left-side">
-      <div class="card-trip">
+    <div class="left-side-fshow">
+      <div class="card-trip-fshow">
         <%= cl_image_tag(@flat.photo) %>
         <!-- , :type => :upload, :width => 400, :height => 500, :crop => :fill -->
-        <div class="card-trip-infos">
+        <div class="card-trip-infos-fshow">
           <div>
             <p>Address : <%= @flat.address %></p>
           </div>
-          <h2 class="card-trip-pricing"><%= @flat.price %> euros</h2>
+          <h2 class="card-trip-pricing-fshow"><%= @flat.price %> euros</h2>
           <%# if @flat.user.avatar.present? %>
           <%#= cl_image_tag @flat.user.avatar %>
           <%# else %>
@@ -18,34 +18,36 @@
 
       </div>
 
-      <div class="information">
+      <div class="information-fshow">
         <p>About your flat : <%= @flat.description %></p>
       </div>
     </div>
 
 
-    <div class="right-side">
-      <div class="booking">
+    <div class="right-side-fshow">
+      <div class="booking-fshow">
         <h1>My booking :</h1>
-          <%= simple_form_for [@flat, @booking] do |f| %>
-            <%= f.input :number,
-                        as: :integer,
-                        input_html: {value: nil },
-                        label: "Number of people:" %>
-            <%= f.input :start_date %>
-            <%= f.input :end_date %>
-            <%= f.input :message,
-                        as: :text,
-                        input_html: { value: nil },
-                        label: "Your message :" %>
-            <%= f.submit class: "btn-flat" %>
-          <% end %>
+        <%= simple_form_for [@flat, @booking] do |f| %>
+        <%= f.input :number,
+        as: :integer,
+        input_html: {value: nil },
+        label: "Number of people:" %>
+        <%= f.input :start_date %>
+        <%= f.input :end_date %>
+        <%= f.input :message,
+        as: :text,
+        input_html: { value: nil },
+        label: "Your message :" %>
+        <%= f.submit class: "btn-flat" %>
+        <% end %>
       </div>
     </div>
-    <%= link_to "Delete", flat_path(@flat),
-    method: :delete,
-    data: { confirm: "Are you sure?"} %>
-    <p><%= link_to "Back to list", flats_path %></p>
+    <div class="buttons-fshow">
+      <%= link_to "Delete", flat_path(@flat),
+      method: :delete,
+      data: { confirm: "Are you sure?"} %>
+      <p><%= link_to "Back to list", flats_path %></p>
+    </div>
   </div>
 
 
