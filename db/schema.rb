@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(version: 2019_07_17_095037) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
     t.text "description"
     t.boolean "owner", default: false
     t.string "phonenumber"
@@ -56,7 +55,5 @@ ActiveRecord::Schema.define(version: 2019_07_17_095037) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "bookings", "flats"
-  add_foreign_key "bookings", "users"
   add_foreign_key "flats", "users"
 end
