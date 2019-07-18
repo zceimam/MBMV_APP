@@ -1,5 +1,6 @@
 .page {
     width: 100%;
+    min-height: 100vh;
     height: 100%;
     margin-top: -56px;
     text-align: center;
@@ -8,16 +9,19 @@
 .create_form {
   background-size: 50%;
   color: white;
+  padding: 150px;
+  display: inline-block;
+  text-align: left;
 }
 
 #bookinputs {
   background-color: white;
 }
 
-.form-control {
-    // background-color: rgb(180, 180, 180);
-    width: 70%;
-}
+// .form-control {
+//     // background-color: rgb(180, 180, 180);
+//     width: 70%;
+// }
 
 .form_group {
   width: 150%;
