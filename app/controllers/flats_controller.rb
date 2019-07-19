@@ -14,7 +14,15 @@ class FlatsController < ApplicationController
   end
 
   def index
-    @flats = Flat.all
+    if params[:query].present?
+      sql_query = " \
+        flats.address @@ :query \
+        OR flats.description @@ :query \
+      "
+      @flats = Flat.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @flats = Flat.all
+    end
   end
 
   def show

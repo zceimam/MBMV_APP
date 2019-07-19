@@ -20,6 +20,7 @@ gem 'webpacker'
 
 #gem for a map
 gem 'geocoder'
+gem 'pg_search'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
