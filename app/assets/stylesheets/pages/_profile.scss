@@ -2,6 +2,14 @@
   margin: 20px 0px;
 }
 
+#right-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 60px;
+}
+
 .profile-wrapper {
   position: relative;
 }
@@ -23,12 +31,12 @@
   padding: 20px;
 }
 
-.btn-position {
-  position: absolute;
-  bottom: 60px;
-  right: 35px;
-  margin-top: 20px;
-}
+// .btn-position {
+//   position: absolute;
+//   bottom: 60px;
+//   right: 35px;
+//   margin-top: 20px;
+// }
 
 .btn-position-edit {
   position: absolute;
@@ -39,11 +47,33 @@
 
 .profile-description {
   margin-top: 0px;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 3%;
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-bottom: 0px;
   background-color: rgba(246, 246, 246, 0.9);
   padding: 5px 20px 5px 20px;
   border-left: 2px solid black;
   border-right: 2px solid black;
+  width: 400px;
 }
+
+#btn-create-profile-page {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#btn-update-profile-page {
+  position: absolute;
+  // background-color: rgba(20, 20, 20, 0.9);
+  bottom: 3px;
+  right: 5px;
+}
+
+
+
+
+
+
+
+
+

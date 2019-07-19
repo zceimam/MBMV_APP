@@ -7,17 +7,30 @@ html, body { background: white; }
 }
 
 .left-side-fshow{
+  position: relative;
   width: 54%;
 }
 .right-side-fshow {
   width: 38%;
 }
 
-.big-avatar {
-  position: relative;
-  top: -35px;
-  width: 80px;
+// .big-avatar {
+//   position: relative;
+//   top: -15px;
+//   width: 80px;
+// }
+
+.avatar-fshow {
+  position: absolute;
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+  top: -52px;
+  right: 27px;
+
 }
+
 
 .card-trip-fshow {
   overflow: hidden;
@@ -41,6 +54,7 @@ html, body { background: white; }
   font-size: 12px;
   opacity: .7;
   margin-top: 20px;
+  line-height: 0;
 }
 
 
@@ -71,18 +85,27 @@ html, body { background: white; }
 
 .booking-fshow {
   width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 1px 3px 10px #c3c2c2;
   margin: 10px;
-  padding: 10px;
-  border: 2px solid red;
+  padding: 25px;
   border-radius: 4px;
   margin: 0;
-  // text-align: justify;
 }
 
-.buttons-fshow {
-
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+  width:100%;
 }
 
+.btn-flat:hover {
+  background: #1BCB7F;
+  color: white;
+}
 
-
+#form-title {
+  text-align: center;
+}
