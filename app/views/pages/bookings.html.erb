@@ -5,20 +5,35 @@
   <% else %>
     <h1>Your Bookings:</h1>
   <% end %>
-  <div class="row">
-    <% @bookings.each do |booking| %>
-      <div>
-        <div class="flat-card-trip mx-auto ">
-          <div class="card_img">
-            <%= cl_image_tag(booking.flat.photo) %>
-          </div>
-          <div id="dates">
-            <%= booking.start_date %>
-            <%= booking.end_date %>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
 </div>
 
+<div class="container">
+  <div class="row">
+    <% @bookings.each do |booking| %>
+    <%= link_to flat_path(booking.flat_id) do %>
+      <div class="col-12 col-lg-6 mt-3">
+        <div class="flat-card-trip mx-auto ">
+          <div class="card_img">
+          <%= cl_image_tag(booking.flat.photo) %>
+          </div>
+          <div class="flat-card-trip-infos">
+            <div id="description">
+              <h2><%= link_to booking.flat.description , flat_path(booking.flat_id) %></h2>
+            </div>
+              <div id="dates">
+                <p>
+              <%= booking.start_date %>
+              </p>
+              <p>
+              <%= booking.end_date %>
+              </p>
+          </div>
+          </div>
+
+
+        </div>
+      </div>
+      <% end %>
+      <% end %>
+  </div>
+</div>

@@ -9,16 +9,7 @@
   </div>
 </div>
 
-<div class="map-div">
-<h1 align="center">Find your take-off location :</h1>
-<%= form_tag flats_path, method: :get do %>
-  <%= text_field_tag :query,
-                      params[:query],
-                      input_html: { class: "form-control" },
-                      placeholder: "Find a flat" %>
-<!--   <button type="sumbit" class="search-btn">Search</button>
- -->
-<% end %>
+
 
 
 <div id="map-container">
@@ -30,6 +21,8 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
 </div>
+<div class="title">
+  <h2 class="text-center">Places to stay around the Galaxy</h2>
 </div>
 
 <div class="container">
@@ -55,8 +48,6 @@
   </div>
 </div>
 
-<<<<<<< HEAD
-=======
 <h1 align="center">Look for your flat :</h1>
 <%= form_tag flats_path, method: :get do %>
   <%= text_field_tag :query,
@@ -68,6 +59,5 @@
 
 <% end %>
 
->>>>>>> 91d6b86fc989334d340a6950d62d03667a86b39a
 
 
