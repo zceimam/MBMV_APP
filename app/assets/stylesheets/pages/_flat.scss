@@ -85,13 +85,11 @@ html, body { background: white; }
 
 .booking-fshow {
   width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 1px 3px 10px #c3c2c2;
   margin: 10px;
-  padding: 10px;
-  border: 2px solid red;
+  padding: 25px;
   border-radius: 4px;
   margin: 0;
-  // text-align: justify;
 }
 
 .btn-flat {
@@ -108,3 +106,6 @@ html, body { background: white; }
   color: white;
 }
 
+#form-title {
+  text-align: center;
+}
