@@ -1,5 +1,4 @@
 // Specific CSS for your home-page
-
 #wagon {
   width : 50px;
   position:absolute;
@@ -40,6 +39,12 @@ h1 {
   font-weight: bold;
 }
 
+
+.title h2 {
+  margin: 50px;
+}
+
+
 #form-control {
     display: flex;
     border-radius: 8px;
@@ -51,8 +56,7 @@ h1 {
     opacity:1;
     width:10px;
     // color:white;
-
-
 }
+
 
 
