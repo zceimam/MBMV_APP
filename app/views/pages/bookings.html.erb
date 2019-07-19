@@ -1,4 +1,15 @@
-<% @bookings.each do |booking| %>
- <%= booking.start_date %>
- <%= booking.end_date %>
-<% end %>
+
+<div id="bookings-container">
+  <% if @bookings == [] %>
+  <h1> You have no booking </h1>
+  <% else %>
+    <h1>Your Bookings:</h1>
+  <% end %>
+  <div>
+    <% @bookings.each do |booking| %>
+     <%= booking.start_date %>
+     <%= booking.end_date %>
+    <% end %>
+  </div>
+</div>
+
