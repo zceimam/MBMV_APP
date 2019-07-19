@@ -4,11 +4,16 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.flat = flat_finder
 
+  respond_to do |format|
     if @booking.save
-      redirect_to flat_path(flat_finder)
+      format.html  { redirect_to bookings_path, notice: 'Thank You For Your Booking' }
+      format.json  { render json: Booking.create(book_para) }
     else
-      render 'new'
+      @booking = Booking.new
+      format.html  { render "flats/show" }
+      format.json  { render :json => @booking.errors, :status => :unprocessable_entity }
     end
+  end
   end
 
   def new
@@ -26,6 +31,6 @@ class BookingsController < ApplicationController
   end
 
   def book_para
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :number, :message)
   end
 end
