@@ -45,3 +45,27 @@
   color: black;
 }
 
+.container {
+  position: relative;
+}
+
+.call_btn a {
+  border: 1px solid white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 153px;
+  left: 172px;
+}
+
+
+.call_btn:hover a {
+   background-color: rgba(255,255,255, 0.3);
+   border: 1px solid rgba(255,255,255, 0.3);
+   color: white;
+}
+
+
+
