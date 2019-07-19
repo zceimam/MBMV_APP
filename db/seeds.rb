@@ -2,7 +2,7 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Exampleprys:
-require "pry"
+# require "pry"
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 url = "https://res.cloudinary.com/dtxbqazks/image/upload/v1563374750/uhq8h7th8e8xuadtyv5r.jpg"
