@@ -20,6 +20,11 @@
   margin: 45px;
   border: black 2px solid;
   border-radius: 10px;
+  position:relative;
+  height:610px;
+  width:900px;
+  justify-content : center;
+  align-items : center;
 }
 
 #signup-header {
@@ -41,7 +46,7 @@ h1 {
 }
 
 .form-control {
-    display: flex;
+    // display: flex;
     border-radius: 8px;
     box-shadow: none;
     border-radius: 50px;
@@ -50,9 +55,18 @@ h1 {
     margin: 0 auto;
     opacity:1;
     width:10px;
+    text-align: center;
     // color:white;
+    position:absolute;
+    top: 707px;
+    left: 250px;
 
 
 }
 
+.map-div {
+  display: flex;
+  // align-items:center;
+  // justify-content:center;
+}
 
