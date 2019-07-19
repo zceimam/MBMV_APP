@@ -1,5 +1,16 @@
 #bookings-container {
   display: flex;
+  display: inline-block;
   padding: 50px;
   justify-content: space-around;
+  background-color: white;
+  border-radius: 10px;
 }
+
+#bckg-grey {
+  background-color: rgba(250, 250, 250 ,0.9);
+  min-height: 100vh;
+  height: 100%;
+  text-align: center;
+}
+

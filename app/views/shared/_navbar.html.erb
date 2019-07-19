@@ -39,7 +39,9 @@
               <%= link_to "my flats", my_flats_path, :class => "ele-dropdown" %>
             <% end %>
           <% end %>
-          <%= link_to "my bookings", bookings_path, :class => "ele-dropdown" %>
+          <% if user_signed_in? %>
+            <%= link_to "my bookings", bookings_path, :class => "ele-dropdown" %>
+          <% end %>
         </div>
       </li>
     </ul>
