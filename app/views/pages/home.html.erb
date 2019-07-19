@@ -22,7 +22,7 @@
               <h2><%= link_to flat.description, flat_path(flat) %></h2>
             </div>
             <h2 class="flat-card-trip-pricing"><%= flat.price %> $</h2>
-            <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="flat-card-trip-user avatar-bordered"/>
+            <%= cl_image_tag flat.user.avatar, :class => "flat-card-trip-user avatar-bordered" %>
           </div>
         </div>
       </div>

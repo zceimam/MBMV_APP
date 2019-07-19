@@ -12,6 +12,11 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <% if user_signed_in? %>
+          <%= link_to "Rent your flat", new_flat_path, class: "nav-link" %>
+        <% end %>
+      </li>
+      <li class="nav-item active">
+        <% if user_signed_in? %>
            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
          <% else %>
             <%= link_to "Log in", user_session_path, class: "nav-link" %>
