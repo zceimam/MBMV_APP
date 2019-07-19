@@ -39,7 +39,24 @@ h1 {
   font-weight: bold;
 }
 
+
 .title h2 {
   margin: 50px;
 }
+
+
+#form-control {
+    display: flex;
+    border-radius: 8px;
+    box-shadow: none;
+    border-radius: 50px;
+    z-index: 3;
+    height: 44px;
+    margin: 0 auto;
+    opacity:1;
+    width:10px;
+    // color:white;
+}
+
+
 

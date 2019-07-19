@@ -38,6 +38,17 @@
 
 
 <h1 align="center">Look for your flat :</h1>
+<%= form_tag flats_path, method: :get do %>
+  <%= text_field_tag :query,
+                      params[:query],
+                      input_html: { id: "form-control" },
+                      placeholder: "Find a flat" %>
+<!--   <button type="sumbit" class="search-btn">Search</button>
+ -->
+
+<% end %>
+
+
 <div id="map-container">
   <div
     id="map"
